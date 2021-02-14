@@ -4,10 +4,10 @@ import Colors from '../../../utils/colors';
 export default StyleSheet.create({
   container: {
     marginHorizontal: 16,
-    marginVertical: 8,
+    marginVertical: 6,
     paddingHorizontal: 8,
     paddingVertical: 16,
-    height: 96,
+    height: 92,
     borderRadius: 8,
     alignSelf: 'stretch',
     justifyContent: 'flex-start',
