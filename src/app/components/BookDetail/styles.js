@@ -7,7 +7,7 @@ export default StyleSheet.create({
   },
   cardContainer: {
     marginHorizontal: 16,
-    marginTop: 16,
+    marginTop: 32,
     paddingHorizontal: 32,
     paddingVertical: 16,
     height: 272,
