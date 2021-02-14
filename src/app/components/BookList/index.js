@@ -1,15 +1,7 @@
-import React, {useEffect, useState} from 'react';
-import {View, StyleSheet, FlatList} from 'react-native';
-import Colors from '../../../utils/colors';
+import React, {useState} from 'react';
+import {View, FlatList} from 'react-native';
 import BookCell from '../BookCell';
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: Colors.aliceBlue,
-    paddingVertical: 8,
-  },
-});
+import styles from './styles';
 
 const BookList = () => {
   const bookStruct = {
@@ -20,6 +12,7 @@ const BookList = () => {
     id: Math.random() * (999 - 0) + 0,
   };
   const [books, setBooks] = useState([
+    bookStruct,
     bookStruct,
     bookStruct,
     bookStruct,
