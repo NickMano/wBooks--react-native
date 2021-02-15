@@ -10,11 +10,8 @@ const screenOptions = {
     backgroundColor: Colors.aliceBlue,
     shadowColor: 'transparent',
   },
-  headerTitleStyle: {
-    marginBottom: 16,
-  },
   headerBackground: () => (
-    <Image style={{height: 72, resizeMode: 'stretch'}} source={bkImage} />
+    <Image style={{height: 80, resizeMode: 'stretch'}} source={bkImage} />
   ),
   headerTintColor: Colors.white,
 };
