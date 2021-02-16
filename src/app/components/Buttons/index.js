@@ -1,10 +1,11 @@
 import React from 'react';
 import {Text, Pressable} from 'react-native';
 import PropTypes from 'prop-types';
+import LinearGradient from 'react-native-linear-gradient';
 import styles from './styles';
 
 const ButtonOutline = ({borderColor, text, textColor}) => {
-  const style = styles(borderColor, textColor);
+  const style = styles(textColor, borderColor);
 
   return (
     <Pressable style={[style.button, style.buttonOutline]}>
@@ -19,19 +20,24 @@ ButtonOutline.propTypes = {
   textColor: PropTypes.string.isRequired,
 };
 
-const ButtonGradient = ({mainColor, secondColor, text, textColor}) => {
-  const style = styles(null, textColor, mainColor, secondColor);
+const ButtonGradient = ({colors, text, textColor}) => {
+  const style = styles(textColor);
 
   return (
-    <Pressable style={[style.button, style.buttonGradient]}>
-      <Text style={style.textButton}>{text}</Text>
+    <Pressable>
+      <LinearGradient
+        start={{x: 0, y: 0}}
+        end={{x: 1, y: 0}}
+        colors={colors}
+        style={style.button}>
+        <Text style={style.textButton}>{text}</Text>
+      </LinearGradient>
     </Pressable>
   );
 };
 
 ButtonGradient.propTypes = {
-  mainColor: PropTypes.string.isRequired,
-  secondColor: PropTypes.string.isRequired,
+  color: PropTypes.arrayOf(PropTypes.string),
   text: PropTypes.string.isRequired,
   textColor: PropTypes.string.isRequired,
 };

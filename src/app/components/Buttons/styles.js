@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
 
-const styles = (borderColor, textColor, mainColor, secondColor) =>
+const styles = (textColor, borderColor) =>
   StyleSheet.create({
     textButton: {
       fontWeight: '900',
@@ -13,9 +13,6 @@ const styles = (borderColor, textColor, mainColor, secondColor) =>
       paddingVertical: 12,
       borderRadius: 40,
       marginVertical: 6,
-    },
-    buttonGradient: {
-      backgroundColor: mainColor,
     },
     buttonOutline: {
       borderColor: borderColor,

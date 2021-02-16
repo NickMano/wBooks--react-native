@@ -26,8 +26,7 @@ const BookDetail = ({book}) => {
           textColor={Colors.blueJeans}
         />
         <ButtonGradient
-          mainColor={Colors.blueJeans}
-          secondColor={null}
+          colors={[Colors.blueJeans, Colors.blueGreen]}
           text="RENT"
           textColor={Colors.white}
         />
