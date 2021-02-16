@@ -6,7 +6,6 @@ const BookScreen = (props) => {
   const {books, navigation} = props;
 
   const handlePress = (book) => {
-    console.log(book);
     navigation.navigate('Book Detail', {book});
   };
 

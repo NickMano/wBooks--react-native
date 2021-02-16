@@ -10,7 +10,6 @@ export default StyleSheet.create({
     marginTop: 32,
     paddingHorizontal: 32,
     paddingVertical: 16,
-    height: 272,
     borderRadius: 4,
     flexDirection: 'column',
     alignSelf: 'stretch',
@@ -63,30 +62,5 @@ export default StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 14,
     marginBottom: 2,
-  },
-  textButton: {
-    fontWeight: '900',
-    textAlign: 'center',
-    fontSize: 16,
-  },
-  textBlueJeans: {
-    color: Colors.blueJeans,
-  },
-  textWhite: {
-    color: Colors.white,
-  },
-  button: {
-    width: '100%',
-    paddingVertical: 12,
-    borderRadius: 40,
-    marginVertical: 6,
-  },
-  buttonWithGradient: {
-    backgroundColor: Colors.blueJeans,
-  },
-  buttonOutline: {
-    color: Colors.davisGray,
-    borderColor: Colors.blueJeans,
-    borderWidth: 1.6,
   },
 });

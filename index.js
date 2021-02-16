@@ -11,7 +11,6 @@ const bookStruct = {
   author: 'Timothy Cross',
   year: '1982',
   genre: 'Novel',
-  id: Math.random() * (999 - 0) + 0,
 };
 const reducer = () => ({
   books: [

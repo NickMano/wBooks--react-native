@@ -1,10 +1,12 @@
 import React from 'react';
-import {View, Text, Image, Pressable} from 'react-native';
+import {View, Text, Image} from 'react-native';
 import PropTypes from 'prop-types';
 import styles from './styles';
 import bookImage from '../../../assets/img_book1.png';
+import {ButtonGradient, ButtonOutline} from '../Buttons';
+import Colors from '../../../utils/colors';
 
-const BookCell = ({book}) => {
+const BookDetail = ({book}) => {
   return (
     <View style={styles.cardContainer}>
       <View style={styles.rowContainer}>
@@ -18,19 +20,23 @@ const BookCell = ({book}) => {
         </View>
       </View>
       <View style={styles.columnContainer}>
-        <Pressable style={[styles.button, styles.buttonOutline]}>
-          <Text style={[styles.textButton, styles.textBlueJeans]}>
-            ADD TO WISHLIST
-          </Text>
-        </Pressable>
-        <Pressable style={[styles.button, styles.buttonWithGradient]}>
-          <Text style={[styles.textButton, styles.textWhite]}>RENT</Text>
-        </Pressable>
+        <ButtonOutline
+          borderColor={Colors.blueJeans}
+          text="ADD TO WISHLIST"
+          textColor={Colors.blueJeans}
+        />
+        <ButtonGradient
+          mainColor={Colors.blueJeans}
+          secondColor={null}
+          text="RENT"
+          textColor={Colors.white}
+        />
       </View>
     </View>
   );
 };
-BookCell.propTypes = {
+
+BookDetail.propTypes = {
   book: PropTypes.shape({
     author: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
@@ -38,8 +44,9 @@ BookCell.propTypes = {
     genre: PropTypes.string.isRequired,
   }),
 };
-BookCell.defaultProps = {
+
+BookDetail.defaultProps = {
   book: {title: '', author: ''},
 };
 
-export default BookCell;
+export default BookDetail;

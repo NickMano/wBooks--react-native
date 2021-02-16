@@ -16,6 +16,7 @@ const BookCell = ({onPress, book}) => {
     </Pressable>
   );
 };
+
 BookCell.propTypes = {
   onPress: PropTypes.func,
   book: PropTypes.shape({
@@ -23,6 +24,7 @@ BookCell.propTypes = {
     title: PropTypes.string.isRequired,
   }),
 };
+
 BookCell.defaultProps = {
   onPress: () => {},
   book: {title: '', author: ''},

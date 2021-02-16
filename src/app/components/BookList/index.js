@@ -11,7 +11,9 @@ const BookList = ({books, handlePress}) => {
         renderItem={({item}) => (
           <BookCell book={item} onPress={() => handlePress(item)} />
         )}
-        keyExtractor={(item) => item.id}
+        keyExtractor={(item) =>
+          Math.floor(Math.random() * (999999 - 0) + 0).toString()
+        }
       />
     </View>
   );

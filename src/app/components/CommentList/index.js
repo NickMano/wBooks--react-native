@@ -5,10 +5,10 @@ import styles from './styles';
 
 const CommentList = () => {
   const commentStruct = {
+    userPhoto: '',
     userName: 'John Appleseed',
     comment:
       "It was greet to see you again earlier. Let's definitely get that coffee.",
-    id: Math.random() * (99999 - 0) + 0,
   };
 
   const [comments, setComments] = useState([
@@ -22,9 +22,15 @@ const CommentList = () => {
       <FlatList
         data={comments}
         renderItem={({item}) => (
-          <Comment userName={item.userName} comment={item.comment} />
+          <Comment
+            userPhoto={item.userPhoto}
+            userName={item.userName}
+            comment={item.comment}
+          />
         )}
-        keyExtractor={(item) => item.id}
+        keyExtractor={(item) =>
+          Math.floor(Math.random() * (999999 - 0) + 0).toString()
+        }
       />
       <Button title="View All" />
     </View>
